@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmvcxru171btt"]
+
+[ext_resource type="Texture2D" uid="uid://cvx22dokpqy0k" path="res://16x16-RPG-characters/16x16-RPG-characters/sprites/new-style/chibi-layered.png" id="1_mi2iw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qbd5"]
+atlas = ExtResource("1_mi2iw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjufs"]
+atlas = ExtResource("1_mi2iw")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4xus"]
+atlas = ExtResource("1_mi2iw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2m7yk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qbd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjufs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4xus")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2m7yk")
+frame = 2
+frame_progress = 1.0
