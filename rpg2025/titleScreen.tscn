@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://blxge4o0embe1"]
+
+[ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="1_sf2e2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tic01"]
+font = ExtResource("1_sf2e2")
+font_size = 150
+font_color = Color(1, 1, 0, 1)
+outline_size = 52
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 1, 0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 147.0
+offset_right = 1081.0
+offset_bottom = 465.0
+text = "Placeholder
+Title"
+label_settings = SubResource("LabelSettings_tic01")
+horizontal_alignment = 1
+vertical_alignment = 1
