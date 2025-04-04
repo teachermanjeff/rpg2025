@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dggsii65mlthy"]
+
+[ext_resource type="Texture2D" uid="uid://d24lehx2y5mit" path="res://Battlers/World01_007_Pirate.png" id="1_b3cb5"]
+[ext_resource type="Texture2D" uid="uid://cqj7i6hgla57i" path="res://hand_cursor0000.png" id="2_qan7i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_b3cb5")
+
+[node name="focus" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-15, -2)
+scale = Vector2(0.4, 0.417)
+texture = ExtResource("2_qan7i")
+
+[node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
+offset_left = -8.0
+offset_top = -20.0
+offset_right = 92.0
+offset_bottom = 7.0
+scale = Vector2(0.15, 0.15)
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpwk6hnckfguw"]
+
+[ext_resource type="PackedScene" uid="uid://j5gl0jw6gvhc" path="res://enemygroup.tscn" id="1_fw8re"]
+[ext_resource type="Texture2D" uid="uid://b100b4w7fp4ao" path="res://environment_forest_evening.png" id="1_r5l0u"]
+[ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="3_5g7vw"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -11.0
+offset_top = -18.0
+offset_right = 319.0
+offset_bottom = 180.0
+texture = ExtResource("1_r5l0u")
+expand_mode = 1
+
+[node name="EnemyGroup" parent="." instance=ExtResource("1_fw8re")]
+position = Vector2(54, 54)
+
+[node name="PlayerGroup" parent="." instance=ExtResource("3_5g7vw")]
+position = Vector2(226, 52)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="choice" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.84375
+anchor_top = 0.611111
+anchor_right = 0.945313
+anchor_bottom = 0.891667
+offset_right = 32.5
+offset_bottom = 50.5
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true
+
+[node name="Attack" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+text = "Attack"
+
+[node name="Defend" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+disabled = true
+text = "Defend"
+
+[node name="Run" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+disabled = true
+text = "Run"

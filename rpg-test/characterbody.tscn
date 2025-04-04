@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://yayqok80tkq2"]
+
+[ext_resource type="Script" uid="uid://bq7ldokogctdn" path="res://characterbody.gd" id="1_2nbgj"]
+[ext_resource type="Texture2D" uid="uid://d24lehx2y5mit" path="res://Battlers/World01_007_Pirate.png" id="1_lfkt1"]
+[ext_resource type="Texture2D" uid="uid://cqj7i6hgla57i" path="res://hand_cursor0000.png" id="2_2nbgj"]
+
+[sub_resource type="Animation" id="Animation_lfkt1"]
+resource_name = "Hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.2, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(30, 30, 30, 1), Color(30, 30, 30, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2nbgj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfs80"]
+_data = {
+&"Hurt": SubResource("Animation_lfkt1"),
+&"RESET": SubResource("Animation_2nbgj")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_2nbgj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_lfkt1")
+
+[node name="focus" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-15, -2)
+scale = Vector2(0.4, 0.417)
+texture = ExtResource("2_2nbgj")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -8.0
+offset_top = -20.0
+offset_right = 92.0
+offset_bottom = 7.0
+scale = Vector2(0.15, 0.15)
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bfs80")
+}
