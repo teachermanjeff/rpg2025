@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 @export var MAX_HEALTH: float = 7
 
+var idle = true
+
 var health: float = 7:
 	set(value):
 		health = value
@@ -16,7 +18,9 @@ func _update_progress_bar():
 	progress_bar.value = (health/MAX_HEALTH) * 100
 
 func _play_animation():
+	idle = false
 	animation_player.play("Hurt")
+	idle = true
 
 func focus():
 	_focus.show()
@@ -26,3 +30,10 @@ func unfocus():
 
 func take_damage(value):
 	health -= value
+
+func idle_animation():
+	while(idle == true):
+		position.y += 1
+		position.y += 1
+		position.y -= 1
+		position.y -= 1
