@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var focus = $focus
+@onready var _focus = $focus
 @onready var progress_bar = $ProgressBar
 @onready var animation_player = $AnimationPlayer
 
@@ -16,4 +16,13 @@ func _update_progress_bar():
 	progress_bar.value = (health/MAX_HEALTH) * 100
 
 func _play_animation():
-	animation_player.play("hurt")
+	animation_player.play("Hurt")
+
+func focus():
+	_focus.show()
+
+func unfocus():
+	_focus.hide()
+
+func take_damage(value):
+	health -= value

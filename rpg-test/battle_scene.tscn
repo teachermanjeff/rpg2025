@@ -48,3 +48,6 @@ text = "Defend"
 layout_mode = 2
 disabled = true
 text = "Run"
+
+[connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
+[connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
