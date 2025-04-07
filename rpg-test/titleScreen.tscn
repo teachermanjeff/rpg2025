@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0dei012rro6o"]
+[gd_scene load_steps=6 format=3 uid="uid://d0dei012rro6o"]
 
 [ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="1_sf2e2"]
+[ext_resource type="Texture2D" uid="uid://d011qkr5u6hue" path="res://menu.jpg" id="1_yqvil"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="2_tic01"]
+[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_k43e0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tic01"]
 font = ExtResource("1_sf2e2")
@@ -19,6 +21,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -24.0
+offset_right = 1123.25
+offset_bottom = 1940.0
+texture = ExtResource("1_yqvil")
+expand_mode = 3
+stretch_mode = 5
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 4.0
@@ -33,10 +45,26 @@ vertical_alignment = 1
 
 [node name="MenuButton" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = 502.0
-offset_top = 740.0
-offset_right = 568.0
-offset_bottom = 748.0
+offset_left = 408.0
+offset_top = 976.0
+offset_right = 655.0
+offset_bottom = 1093.0
+theme_override_fonts/font = ExtResource("3_k43e0")
+theme_override_font_sizes/font_size = 36
 text = "Start Game"
 icon = ExtResource("2_tic01")
 icon_alignment = 1
+expand_icon = true
+
+[node name="MenuButton2" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 1218.0
+offset_right = 672.0
+offset_bottom = 1304.0
+theme_override_fonts/font = ExtResource("3_k43e0")
+theme_override_font_sizes/font_size = 36
+text = "Lore"
+icon = ExtResource("2_tic01")
+icon_alignment = 1
+expand_icon = true
