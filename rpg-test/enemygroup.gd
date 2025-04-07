@@ -17,15 +17,15 @@ func _ready():
 
 func _process(_delta):
 	if not choice.visible:
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("up"):
 			if index > 0:
 				index -= 1
 				switch_focus(index, index+1)
-		if Input.is_action_just_pressed("ui_down"):
+		if Input.is_action_just_pressed("down"):
 			if index < enemies.size() - 1:
 				index += 1
 				switch_focus(index, index-1)
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("select"):
 			action_queue.push_back(index)
 			emit_signal("next_player")
 	
