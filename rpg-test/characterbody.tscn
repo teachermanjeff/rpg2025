@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yayqok80tkq2"]
+[gd_scene load_steps=8 format=3 uid="uid://yayqok80tkq2"]
 
 [ext_resource type="Script" uid="uid://bq7ldokogctdn" path="res://characterbody.gd" id="1_2nbgj"]
 [ext_resource type="Texture2D" uid="uid://d24lehx2y5mit" path="res://Battlers/World01_007_Pirate.png" id="1_lfkt1"]
@@ -34,10 +34,14 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_bfs80"]
+resource_name = "death"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bfs80"]
 _data = {
 &"Hurt": SubResource("Animation_lfkt1"),
-&"RESET": SubResource("Animation_2nbgj")
+&"RESET": SubResource("Animation_2nbgj"),
+&"death": SubResource("Animation_bfs80")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]

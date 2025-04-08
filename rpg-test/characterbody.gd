@@ -30,6 +30,10 @@ func unfocus():
 
 func take_damage(value):
 	health -= value
+	_update_progress_bar()
+	_play_animation()
+	if health <= 0:
+		_die()
 
 func idle_animation():
 	while(idle == true):
@@ -37,3 +41,9 @@ func idle_animation():
 		position.y += 1
 		position.y -= 1
 		position.y -= 1
+
+func attack(target):
+	target.take_damage(1)
+
+func _die():
+	hide()
