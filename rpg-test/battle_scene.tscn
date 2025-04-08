@@ -15,11 +15,11 @@ texture = ExtResource("1_5g7vw")
 expand_mode = 1
 
 [node name="EnemyGroup" parent="." instance=ExtResource("1_fw8re")]
-position = Vector2(526, 534)
+position = Vector2(122, 555)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("3_5g7vw")]
-position = Vector2(540, 1425)
+position = Vector2(116, 1328)
 scale = Vector2(5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
