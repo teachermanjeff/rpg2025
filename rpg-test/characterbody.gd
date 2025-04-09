@@ -47,3 +47,6 @@ func attack(target):
 
 func _die():
 	hide()
+
+func is_alive() -> bool:
+	return health > 0

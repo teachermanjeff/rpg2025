@@ -7,7 +7,7 @@ var index: int = 0
 
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
-@onready var next_level_button = $".../BattleScene/next_level_button"
+@onready var next_level_button = $"../next_level_button"
 
 func _ready():
 	enemies = get_children()
@@ -37,7 +37,8 @@ func _process(_delta):
 		
 func _action(stack):
 	for i in stack:
-		enemies[i].take_damage(1)
+		if enemies[i].is_alive():
+			enemies[i].take_damage(1)
 		await get_tree().create_timer(1).timeout
 	action_queue.clear()
 	is_battling = false
@@ -71,11 +72,12 @@ func _on_attack_pressed():
 func check_for_victory():
 	var all_dead = true
 	for enemy in enemies:
-		if enemy.is.visible():
+		if enemy.is_alive():
 			all_dead = false
 			break
 	if all_dead:
 		show_next_level_button()
+		choice.hide()
 
 func show_next_level_button():
 	next_level_button.show()
