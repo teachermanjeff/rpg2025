@@ -43,7 +43,8 @@ func idle_animation():
 		position.y -= 1
 
 func attack(target):
-	target.take_damage(1)
+	var damage = randi_range(1, 3)
+	target.take_damage(damage)
 
 func _die():
 	hide()

@@ -19,13 +19,20 @@ func _ready():
 func _process(_delta):
 	if not choice.visible:
 		if Input.is_action_just_pressed("left"):
-			if index > 0:
-				index -= 1
-				switch_focus(index, index+1)
+			var new_index = index - 1
+			while new_index >= 0 and not enemies[new_index].is_alive():
+				new_index -= 1
+			if new_index >= 0:
+				switch_focus(new_index, index)
+				index = new_index
+
 		if Input.is_action_just_pressed("right"):
-			if index < enemies.size() - 1:
-				index += 1
-				switch_focus(index, index-1)
+			var new_index = index + 1
+			while new_index < enemies.size() and not enemies[new_index].is_alive():
+				new_index += 1
+			if new_index < enemies.size():
+				switch_focus(new_index, index)
+				index = new_index
 		if Input.is_action_just_pressed("select"):
 			action_queue.push_back(index)
 			emit_signal("next_player")
