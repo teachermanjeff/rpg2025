@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0dei012rro6o"]
+[gd_scene load_steps=7 format=3 uid="uid://d0dei012rro6o"]
 
+[ext_resource type="Script" uid="uid://c6c0axc616po4" path="res://title_screen.gd" id="1_k43e0"]
 [ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="1_sf2e2"]
 [ext_resource type="Texture2D" uid="uid://d011qkr5u6hue" path="res://menu.jpg" id="1_yqvil"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="2_tic01"]
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k43e0")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -68,3 +70,6 @@ text = "Lore"
 icon = ExtResource("2_tic01")
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MenuButton2" to="." method="_on_menu_button_2_pressed"]

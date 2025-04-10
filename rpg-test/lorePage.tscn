@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2tiolytbycug"]
+[gd_scene load_steps=8 format=3 uid="uid://d2tiolytbycug"]
 
 [ext_resource type="Texture2D" uid="uid://d011qkr5u6hue" path="res://menu.jpg" id="1_66gum"]
+[ext_resource type="Script" uid="uid://cgghqtx5xctn2" path="res://lore_page.gd" id="1_mdp7r"]
 [ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_e72gh"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_mdp7r"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="4_e72gh"]
@@ -23,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mdp7r")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -69,3 +71,5 @@ text = "Back"
 icon = ExtResource("4_e72gh")
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

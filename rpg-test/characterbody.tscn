@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://yayqok80tkq2"]
+[gd_scene load_steps=9 format=3 uid="uid://yayqok80tkq2"]
 
 [ext_resource type="Script" uid="uid://bq7ldokogctdn" path="res://characterbody.gd" id="1_2nbgj"]
 [ext_resource type="Texture2D" uid="uid://d24lehx2y5mit" path="res://Battlers/World01_007_Pirate.png" id="1_lfkt1"]
 [ext_resource type="Texture2D" uid="uid://cqj7i6hgla57i" path="res://hand_cursor0000.png" id="2_2nbgj"]
+[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_bfs80"]
 
 [sub_resource type="Animation" id="Animation_lfkt1"]
 resource_name = "Hurt"
@@ -65,6 +66,8 @@ offset_top = -20.0
 offset_right = 92.0
 offset_bottom = 7.0
 scale = Vector2(0.15, 0.15)
+theme_override_fonts/font = ExtResource("4_bfs80")
+theme_override_font_sizes/font_size = 25
 value = 100.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
