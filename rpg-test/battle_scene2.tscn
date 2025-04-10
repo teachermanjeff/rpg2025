@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://crousj8s61c7h"]
+
+[ext_resource type="Texture2D" uid="uid://kwdhwrrogscq" path="res://background.jpg" id="1_uuxq1"]
+[ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="2_qoigr"]
+[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_ji01y"]
+[ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="4_trv36"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -29.0
+offset_top = -13.0
+offset_right = 1125.0
+offset_bottom = 1973.0
+texture = ExtResource("1_uuxq1")
+expand_mode = 1
+
+[node name="PlayerGroup" parent="." instance=ExtResource("2_qoigr")]
+position = Vector2(304, 1297)
+scale = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="choice" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 700.0
+offset_top = 1400.0
+offset_right = 850.0
+offset_bottom = 1501.0
+scale = Vector2(2.4, 2.4)
+
+[node name="Attack" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ji01y")
+theme_override_font_sizes/font_size = 20
+text = "Attack"
+icon = ExtResource("4_trv36")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Defend" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ji01y")
+theme_override_font_sizes/font_size = 20
+text = "Defend"
+icon = ExtResource("4_trv36")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Run" type="Button" parent="CanvasLayer/choice"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ji01y")
+theme_override_font_sizes/font_size = 20
+text = "Run"
+icon = ExtResource("4_trv36")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 450.0
+offset_top = 800.0
+offset_right = 556.0
+offset_bottom = 843.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_ji01y")
+theme_override_font_sizes/font_size = 17
+text = "Next Level"
+icon = ExtResource("4_trv36")
+icon_alignment = 1
+expand_icon = true
