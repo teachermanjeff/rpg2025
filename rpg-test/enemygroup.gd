@@ -86,5 +86,7 @@ func check_for_victory():
 		show_next_level_button()
 		choice.hide()
 
+
+
 func show_next_level_button():
 	next_level_button.show()
