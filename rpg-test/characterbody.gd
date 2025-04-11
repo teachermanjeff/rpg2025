@@ -35,7 +35,8 @@ func take_damage(value):
 		_die()
 
 func attack(target):
-	target.take_damage(1)
+	var damage = randi_range(1, 3)
+	target.take_damage(damage)
 
 func _die():
 	hide()
