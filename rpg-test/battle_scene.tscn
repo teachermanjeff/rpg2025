@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpwk6hnckfguw"]
+[gd_scene load_steps=6 format=3 uid="uid://bpwk6hnckfguw"]
 
 [ext_resource type="Texture2D" uid="uid://kwdhwrrogscq" path="res://background.jpg" id="1_5g7vw"]
 [ext_resource type="PackedScene" uid="uid://j5gl0jw6gvhc" path="res://enemygroup.tscn" id="1_fw8re"]
 [ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="3_5g7vw"]
+[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_gf131"]
+[ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="5_sl17i"]
 
 [node name="BattleScene" type="Node2D"]
 
@@ -41,25 +43,45 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Attack" type="Button" parent="CanvasLayer/choice"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gf131")
+theme_override_font_sizes/font_size = 20
 text = "Attack"
+icon = ExtResource("5_sl17i")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Defend" type="Button" parent="CanvasLayer/choice"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gf131")
+theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Defend"
+icon = ExtResource("5_sl17i")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Run" type="Button" parent="CanvasLayer/choice"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gf131")
+theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Run"
+icon = ExtResource("5_sl17i")
+icon_alignment = 1
+expand_icon = true
 
 [node name="next_level_button" type="Button" parent="."]
 offset_left = 450.0
 offset_top = 800.0
-offset_right = 540.0
-offset_bottom = 831.0
+offset_right = 556.0
+offset_bottom = 843.0
 scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("4_gf131")
+theme_override_font_sizes/font_size = 17
 text = "Next Level"
+icon = ExtResource("5_sl17i")
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]

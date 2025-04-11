@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0dei012rro6o"]
+[gd_scene load_steps=8 format=3 uid="uid://d0dei012rro6o"]
 
 [ext_resource type="Script" uid="uid://c6c0axc616po4" path="res://title_screen.gd" id="1_k43e0"]
 [ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="1_sf2e2"]
@@ -6,13 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="2_tic01"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_k43e0"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_tic01"]
+[sub_resource type="LabelSettings" id="LabelSettings_k43e0"]
 font = ExtResource("1_sf2e2")
 font_size = 150
 font_color = Color(1, 1, 0, 1)
 outline_size = 52
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yn1f2"]
+line_spacing = 2.0
+font = ExtResource("1_sf2e2")
+font_size = 66
+font_color = Color(1, 1, 0, 1)
+outline_size = 52
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,9 +47,10 @@ offset_left = 4.0
 offset_top = 147.0
 offset_right = 1081.0
 offset_bottom = 465.0
-text = "Placeholder
-Title"
-label_settings = SubResource("LabelSettings_tic01")
+text = "Quest
+
+Salvation"
+label_settings = SubResource("LabelSettings_k43e0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -70,6 +79,17 @@ text = "Lore"
 icon = ExtResource("2_tic01")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 147.0
+offset_right = 1081.0
+offset_bottom = 549.0
+text = "-for-"
+label_settings = SubResource("LabelSettings_yn1f2")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="MenuButton2" to="." method="_on_menu_button_2_pressed"]

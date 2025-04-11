@@ -42,10 +42,11 @@ offset_left = 155.0
 offset_top = 228.0
 offset_right = 952.0
 offset_bottom = 534.0
-text = "Lorem Ipsum!"
+text = "Royals Kidnapped!"
 label_settings = SubResource("LabelSettings_1np0j")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
@@ -53,7 +54,7 @@ offset_left = 217.0
 offset_top = 441.0
 offset_right = 909.0
 offset_bottom = 1590.0
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra, lectus at eleifend malesuada, dui odio tincidunt quam, sed viverra ex magna at sem. Sed ipsum lorem, cursus et mi finibus, maximus hendrerit mi. Aenean id sapien sit amet arcu eleifend malesuada. Sed augue nisl, auctor non varius at, consectetur in nisl. Fusce pharetra tempor velit sit amet pretium. Quisque sapien ligula, blandit at tellus non, laoreet convallis dolor. Phasellus vitae magna nec urna blandit tincidunt. Fusce luctus rutrum sagittis."
+text = "The royal family has been kidnapped from their quarters! all that was left in their place was a note. \"If you want your rulers to live you must heed to my deman-\" you rip up the note before you even finish reading it. You don't negotiate with terrorists. You will demolish everything in your path to find them, and you know exactly where they are. A group of theives tried something similar with the crown before, and the traces they left are 1:1. They're deep in the forest. And you'll burn it down if you have to."
 label_settings = SubResource("LabelSettings_d42yb")
 horizontal_alignment = 1
 vertical_alignment = 1

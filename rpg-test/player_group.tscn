@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://e1fmrebk20qw"]
+[gd_scene load_steps=7 format=3 uid="uid://e1fmrebk20qw"]
 
 [ext_resource type="Script" uid="uid://cxqj4xqoujpu7" path="res://player_group.gd" id="1_ao132"]
 [ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="2_c8kvg"]
 [ext_resource type="Texture2D" uid="uid://dnhwwunoypwp3" path="res://warrior_medit.png" id="3_6rvls"]
-[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_c8kvg"]
 [ext_resource type="Texture2D" uid="uid://clyevc8hv3lyi" path="res://ranger_medit.png" id="4_u4hwk"]
 [ext_resource type="Texture2D" uid="uid://c5ulrgtd5kcai" path="res://mage_fedit.png" id="5_choiy"]
 [ext_resource type="Texture2D" uid="uid://b2uikfub03s8p" path="res://healer_fedit.png" id="6_5ujkm"]
@@ -18,20 +17,12 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("3_6rvls")
 
-[node name="ProgressBar" parent="CharacterBody2D" index="2"]
-theme_override_fonts/font = ExtResource("4_c8kvg")
-theme_override_font_sizes/font_size = 25
-
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_c8kvg")]
 
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
 position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("4_u4hwk")
-
-[node name="ProgressBar" parent="CharacterBody2D2" index="2"]
-theme_override_fonts/font = ExtResource("4_c8kvg")
-theme_override_font_sizes/font_size = 25
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("2_c8kvg")]
 
@@ -40,20 +31,12 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("5_choiy")
 
-[node name="ProgressBar" parent="CharacterBody2D3" index="2"]
-theme_override_fonts/font = ExtResource("4_c8kvg")
-theme_override_font_sizes/font_size = 25
-
 [node name="CharacterBody2D4" parent="." instance=ExtResource("2_c8kvg")]
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
 position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("6_5ujkm")
-
-[node name="ProgressBar" parent="CharacterBody2D4" index="2"]
-theme_override_fonts/font = ExtResource("4_c8kvg")
-theme_override_font_sizes/font_size = 25
 
 [editable path="CharacterBody2D"]
 [editable path="CharacterBody2D2"]

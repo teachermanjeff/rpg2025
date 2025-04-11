@@ -55,7 +55,7 @@ icon = ExtResource("4_trv36")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="next_level_button" type="Button" parent="CanvasLayer"]
 offset_left = 450.0
 offset_top = 800.0
 offset_right = 556.0
