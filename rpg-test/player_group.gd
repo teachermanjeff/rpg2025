@@ -104,4 +104,4 @@ func check_for_defeat():
 			all_dead = false
 			break
 	if all_dead:
-		pass #Replace this with switching screen to loseScreen
+		get_tree().change_scene_to_file("res://loseScreen.tscn")
