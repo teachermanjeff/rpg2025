@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpwk6hnckfguw"]
 
-[ext_resource type="Texture2D" uid="uid://kwdhwrrogscq" path="res://background.jpg" id="1_5g7vw"]
 [ext_resource type="PackedScene" uid="uid://j5gl0jw6gvhc" path="res://enemygroup.tscn" id="1_fw8re"]
 [ext_resource type="Script" uid="uid://di07m0dy1aa5t" path="res://battle_scene.gd" id="1_sl17i"]
+[ext_resource type="Texture2D" uid="uid://crqcugt0uwixj" path="res://backgroundNew.jpg" id="2_sl17i"]
 [ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="3_5g7vw"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_gf131"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="5_sl17i"]
@@ -15,15 +15,15 @@ offset_left = -29.0
 offset_top = -13.0
 offset_right = 1125.0
 offset_bottom = 1973.0
-texture = ExtResource("1_5g7vw")
+texture = ExtResource("2_sl17i")
 expand_mode = 1
 
 [node name="EnemyGroup" parent="." instance=ExtResource("1_fw8re")]
-position = Vector2(285, 564)
+position = Vector2(557, 1295)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("3_5g7vw")]
-position = Vector2(304, 1297)
+position = Vector2(457, 1637)
 scale = Vector2(5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
