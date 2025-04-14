@@ -40,7 +40,6 @@ func attack(target):
 
 func _die():
 	hide()
-	get_tree().change_scene("res://loseScreen.tscn")
 
 func is_alive() -> bool:
 	return health > 0
