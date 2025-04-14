@@ -18,9 +18,8 @@ func _update_progress_bar():
 	progress_bar.value = (health/MAX_HEALTH) * 100
 
 func _play_animation():
-	idle = false
 	animation_player.play("Hurt")
-	idle = true
+
 
 func focus():
 	_focus.show()
@@ -34,13 +33,6 @@ func take_damage(value):
 	_play_animation()
 	if health <= 0:
 		_die()
-
-func idle_animation():
-	while(idle == true):
-		position.y += 1
-		position.y += 1
-		position.y -= 1
-		position.y -= 1
 
 func attack(target):
 	var damage = randi_range(1, 3)
