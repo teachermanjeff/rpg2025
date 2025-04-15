@@ -61,8 +61,12 @@ icon = ExtResource("5_fn1d2")
 icon_alignment = 1
 expand_icon = true
 
-[node name="endGameButton" type="Button" parent="CanvasLayer/choice"]
-layout_mode = 2
+[node name="endGameButton" type="Button" parent="CanvasLayer"]
+offset_left = 450.0
+offset_top = 800.0
+offset_right = 556.0
+offset_bottom = 843.0
+scale = Vector2(3, 3)
 theme_override_fonts/font = ExtResource("4_wptth")
 theme_override_font_sizes/font_size = 17
 text = "Continue"
@@ -74,4 +78,4 @@ expand_icon = true
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
-[connection signal="pressed" from="CanvasLayer/choice/endGameButton" to="." method="_on_end_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/endGameButton" to="." method="_on_end_game_button_pressed"]
