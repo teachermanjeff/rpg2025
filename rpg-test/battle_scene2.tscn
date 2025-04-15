@@ -20,19 +20,20 @@ texture = ExtResource("2_sfif0")
 expand_mode = 1
 
 [node name="EnemyGroup" parent="." instance=ExtResource("6_sfif0")]
-position = Vector2(557, 1295)
+position = Vector2(156, 1758)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("2_qoigr")]
-position = Vector2(457, 1637)
+position = Vector2(991, 1664)
 scale = Vector2(5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="choice" type="VBoxContainer" parent="CanvasLayer"]
-offset_top = 1400.0
-offset_right = 150.0
-offset_bottom = 1501.0
+offset_left = 500.0
+offset_top = 1093.0
+offset_right = 650.0
+offset_bottom = 1194.0
 scale = Vector2(2.4, 2.4)
 
 [node name="Attack" type="Button" parent="CanvasLayer/choice"]
@@ -62,7 +63,21 @@ icon = ExtResource("4_trv36")
 icon_alignment = 1
 expand_icon = true
 
+[node name="next_level_button" type="Button" parent="CanvasLayer"]
+offset_left = 450.0
+offset_top = 800.0
+offset_right = 556.0
+offset_bottom = 843.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_ji01y")
+theme_override_font_sizes/font_size = 17
+text = "Next Level"
+icon = ExtResource("4_trv36")
+icon_alignment = 1
+expand_icon = true
+
 [node name="CombatManager" parent="." instance=ExtResource("5_tm830")]
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
+[connection signal="pressed" from="CanvasLayer/next_level_button" to="." method="_on_next_level_button_pressed"]
