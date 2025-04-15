@@ -7,9 +7,10 @@ var index: int = 0
 
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
-@onready var next_level_button = $"../next_level_button"
+@onready var next_level_button = $"../CanvasLayer/next_level_button"
 
 func _ready():
+	print("Next level button is: ", next_level_button)
 	enemies = get_children()
 	for i in enemies.size():
 		enemies[i].position = Vector2(i*32, 0)
@@ -90,3 +91,6 @@ func check_for_victory():
 
 func show_next_level_button():
 	next_level_button.show()
+
+func _on_next_level_button_pressed():
+	get_tree().change_scene_to_file("res://battle_scene2.gd")
