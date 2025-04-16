@@ -1,17 +1,181 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqoxu6g8y0y68"]
+[gd_scene load_steps=16 format=3 uid="uid://bqoxu6g8y0y68"]
 
 [ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="1_whyas"]
 [ext_resource type="Texture2D" uid="uid://cqajf78qg13i7" path="res://Battlers/World04_003_ Outlaw.png" id="2_nfoow"]
 [ext_resource type="Texture2D" uid="uid://csicojjldak74" path="res://Battlers/World01_004_WailingPrince.png" id="3_nfoow"]
 
+[sub_resource type="Animation" id="Animation_nfoow"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_yu4g0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xc0hs"]
+_data = {
+&"RESET": SubResource("Animation_yu4g0"),
+&"focusFloat": SubResource("Animation_nfoow")
+}
+
+[sub_resource type="Animation" id="Animation_j0n8t"]
+resource_name = "focusFloat"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_gs5mr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iq02a"]
+_data = {
+&"RESET": SubResource("Animation_gs5mr"),
+&"focusFloat": SubResource("Animation_j0n8t")
+}
+
+[sub_resource type="Animation" id="Animation_j0vhm"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_pm58k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8tsv"]
+_data = {
+&"RESET": SubResource("Animation_pm58k"),
+&"focusFloat": SubResource("Animation_j0vhm")
+}
+
+[sub_resource type="Animation" id="Animation_gpmqc"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_lgqu4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21prk"]
+_data = {
+&"RESET": SubResource("Animation_lgqu4"),
+&"focusFloat": SubResource("Animation_gpmqc")
+}
+
 [node name="enemygroup3" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_whyas")]
+
+[node name="focus" parent="CharacterBody2D" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_xc0hs")
+}
+autoplay = "focusFloat"
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_whyas")]
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
 texture = ExtResource("2_nfoow")
+
+[node name="focus" parent="CharacterBody2D4" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_iq02a")
+}
 
 [node name="ProgressBar" parent="CharacterBody2D4" index="2"]
 max_value = 150.0
@@ -22,6 +186,15 @@ value = 150.0
 [node name="Sprite2D" parent="CharacterBody2D3" index="0"]
 texture = ExtResource("3_nfoow")
 
+[node name="focus" parent="CharacterBody2D3" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_k8tsv")
+}
+autoplay = "focusFloat"
+
 [node name="ProgressBar" parent="CharacterBody2D3" index="2"]
 max_value = 200.0
 value = 200.0
@@ -30,6 +203,16 @@ value = 200.0
 
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
 texture = ExtResource("2_nfoow")
+
+[node name="focus" parent="CharacterBody2D2" index="1"]
+visible = true
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_21prk")
+}
+autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D2" index="2"]
 max_value = 150.0

@@ -1,13 +1,161 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5tdgk66n2kso"]
+[gd_scene load_steps=17 format=3 uid="uid://b5tdgk66n2kso"]
 
 [ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="1_828ww"]
 [ext_resource type="Texture2D" uid="uid://cqajf78qg13i7" path="res://Battlers/World04_003_ Outlaw.png" id="2_xkdro"]
 
+[sub_resource type="Animation" id="Animation_xkdro"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_8i0bh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7av0c"]
+_data = {
+&"RESET": SubResource("Animation_8i0bh"),
+&"focusFloat": SubResource("Animation_xkdro")
+}
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8i0bh"]
 load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
 
+[sub_resource type="Animation" id="Animation_7av0c"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_o6v3n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txbfm"]
+_data = {
+&"RESET": SubResource("Animation_o6v3n"),
+&"focusFloat": SubResource("Animation_7av0c")
+}
+
+[sub_resource type="Animation" id="Animation_yay8o"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_jkh3w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2g5s"]
+_data = {
+&"RESET": SubResource("Animation_jkh3w"),
+&"focusFloat": SubResource("Animation_yay8o")
+}
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7av0c"]
 load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
+
+[sub_resource type="Animation" id="Animation_tvmjh"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2)]
+}
+
+[sub_resource type="Animation" id="Animation_4438h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gprtj"]
+_data = {
+&"RESET": SubResource("Animation_4438h"),
+&"focusFloat": SubResource("Animation_tvmjh")
+}
 
 [node name="enemygroup2" type="Node2D"]
 
@@ -15,6 +163,15 @@ load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad
 
 [node name="Sprite2D" parent="CharacterBody2D" index="0"]
 texture = ExtResource("2_xkdro")
+
+[node name="focus" parent="CharacterBody2D" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_7av0c")
+}
+autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D" index="2"]
 max_value = 150.0
@@ -25,10 +182,28 @@ value = 150.0
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
 texture = SubResource("CompressedTexture2D_8i0bh")
 
+[node name="focus" parent="CharacterBody2D2" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_txbfm")
+}
+autoplay = "focusFloat"
+
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_828ww")]
 
 [node name="Sprite2D" parent="CharacterBody2D3" index="0"]
 texture = ExtResource("2_xkdro")
+
+[node name="focus" parent="CharacterBody2D3" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_x2g5s")
+}
+autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D3" index="2"]
 max_value = 150.0
@@ -38,6 +213,16 @@ value = 150.0
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
 texture = SubResource("CompressedTexture2D_7av0c")
+
+[node name="focus" parent="CharacterBody2D4" index="1"]
+visible = true
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_gprtj")
+}
+autoplay = "focusFloat"
 
 [editable path="CharacterBody2D"]
 [editable path="CharacterBody2D2"]
