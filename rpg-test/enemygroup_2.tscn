@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5tdgk66n2kso"]
+
+[ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="1_828ww"]
+[ext_resource type="Texture2D" uid="uid://cqajf78qg13i7" path="res://Battlers/World04_003_ Outlaw.png" id="2_xkdro"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8i0bh"]
+load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7av0c"]
+load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
+
+[node name="enemygroup2" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_828ww")]
+
+[node name="Sprite2D" parent="CharacterBody2D" index="0"]
+texture = ExtResource("2_xkdro")
+
+[node name="ProgressBar" parent="CharacterBody2D" index="2"]
+max_value = 150.0
+value = 150.0
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_828ww")]
+
+[node name="Sprite2D" parent="CharacterBody2D2" index="0"]
+texture = SubResource("CompressedTexture2D_8i0bh")
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_828ww")]
+
+[node name="Sprite2D" parent="CharacterBody2D3" index="0"]
+texture = ExtResource("2_xkdro")
+
+[node name="ProgressBar" parent="CharacterBody2D3" index="2"]
+max_value = 150.0
+value = 150.0
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("1_828ww")]
+
+[node name="Sprite2D" parent="CharacterBody2D4" index="0"]
+texture = SubResource("CompressedTexture2D_7av0c")
+
+[editable path="CharacterBody2D"]
+[editable path="CharacterBody2D2"]
+[editable path="CharacterBody2D3"]
+[editable path="CharacterBody2D4"]
