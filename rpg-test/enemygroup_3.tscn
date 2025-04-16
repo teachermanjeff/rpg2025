@@ -205,7 +205,6 @@ value = 200.0
 texture = ExtResource("2_nfoow")
 
 [node name="focus" parent="CharacterBody2D2" index="1"]
-visible = true
 position = Vector2(-15, -1.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]

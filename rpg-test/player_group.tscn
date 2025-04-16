@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://e1fmrebk20qw"]
+[gd_scene load_steps=19 format=3 uid="uid://e1fmrebk20qw"]
 
 [ext_resource type="Script" uid="uid://cxqj4xqoujpu7" path="res://player_group.gd" id="1_ao132"]
 [ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="2_c8kvg"]
@@ -6,6 +6,154 @@
 [ext_resource type="Texture2D" uid="uid://clyevc8hv3lyi" path="res://ranger_medit.png" id="4_u4hwk"]
 [ext_resource type="Texture2D" uid="uid://c5ulrgtd5kcai" path="res://mage_fedit.png" id="5_choiy"]
 [ext_resource type="Texture2D" uid="uid://b2uikfub03s8p" path="res://healer_fedit.png" id="6_5ujkm"]
+
+[sub_resource type="Animation" id="Animation_ao132"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_c8kvg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6rvls"]
+_data = {
+&"RESET": SubResource("Animation_c8kvg"),
+&"focusFloat": SubResource("Animation_ao132")
+}
+
+[sub_resource type="Animation" id="Animation_u4hwk"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_choiy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ujkm"]
+_data = {
+&"RESET": SubResource("Animation_choiy"),
+&"focusFloat": SubResource("Animation_u4hwk")
+}
+
+[sub_resource type="Animation" id="Animation_r24kr"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_odbdv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jadfv"]
+_data = {
+&"RESET": SubResource("Animation_odbdv"),
+&"focusFloat": SubResource("Animation_r24kr")
+}
+
+[sub_resource type="Animation" id="Animation_vvw2g"]
+resource_name = "focusFloat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_xp2jy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_82rfk"]
+_data = {
+&"RESET": SubResource("Animation_xp2jy"),
+&"focusFloat": SubResource("Animation_vvw2g")
+}
 
 [node name="PlayerGroup" type="Node2D"]
 script = ExtResource("1_ao132")
@@ -17,12 +165,30 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("3_6rvls")
 
+[node name="focus" parent="CharacterBody2D" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_6rvls")
+}
+autoplay = "focusFloat"
+
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_c8kvg")]
 
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
 position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("4_u4hwk")
+
+[node name="focus" parent="CharacterBody2D2" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_5ujkm")
+}
+autoplay = "focusFloat"
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("2_c8kvg")]
 
@@ -31,12 +197,30 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("5_choiy")
 
+[node name="focus" parent="CharacterBody2D3" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_jadfv")
+}
+autoplay = "focusFloat"
+
 [node name="CharacterBody2D4" parent="." instance=ExtResource("2_c8kvg")]
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
 position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("6_5ujkm")
+
+[node name="focus" parent="CharacterBody2D4" index="1"]
+position = Vector2(-15, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_82rfk")
+}
+autoplay = "focusFloat"
 
 [editable path="CharacterBody2D"]
 [editable path="CharacterBody2D2"]

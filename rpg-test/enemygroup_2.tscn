@@ -215,7 +215,6 @@ value = 150.0
 texture = SubResource("CompressedTexture2D_7av0c")
 
 [node name="focus" parent="CharacterBody2D4" index="1"]
-visible = true
 position = Vector2(-15, -1.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
