@@ -90,5 +90,4 @@ expand_icon = true
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
-[connection signal="pressed" from="CanvasLayer/next_level_button" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/next_level_button" to="EnemyGroup" method="_on_next_level_button_pressed"]

@@ -8,8 +8,6 @@ var is_active_turn: bool = true
 
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
-@onready var next_level_button = $"../CanvasLayer/next_level_button"
-@onready var next_level_button_2 = $"../CanvasLayer/next_level_button_2"
 @onready var endGameButton = $"../CanvasLayer/endGameButton"
 
 func _ready():

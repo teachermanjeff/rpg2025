@@ -25,7 +25,7 @@ scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("2_qoigr")]
 position = Vector2(991, 1664)
-scale = Vector2(5, 5)
+scale = Vector2(-5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -49,6 +49,7 @@ expand_icon = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ji01y")
 theme_override_font_sizes/font_size = 20
+disabled = true
 text = "Defend"
 icon = ExtResource("4_trv36")
 icon_alignment = 1
@@ -58,6 +59,7 @@ expand_icon = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ji01y")
 theme_override_font_sizes/font_size = 20
+disabled = true
 text = "Run"
 icon = ExtResource("4_trv36")
 icon_alignment = 1
