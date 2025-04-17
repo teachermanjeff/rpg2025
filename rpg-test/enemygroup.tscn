@@ -7,9 +7,13 @@
 script = ExtResource("1_05mbu")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_e8tfm")]
+position = Vector2(22, -2)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_e8tfm")]
+position = Vector2(-15, 26)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_e8tfm")]
+position = Vector2(-2, -4)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_e8tfm")]
+position = Vector2(6, 27)

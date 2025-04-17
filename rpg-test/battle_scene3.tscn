@@ -22,8 +22,8 @@ position = Vector2(663, 1606)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("2_sveay")]
-position = Vector2(886, 1827)
-scale = Vector2(-5, 5)
+position = Vector2(979, 1829)
+scale = Vector2(5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

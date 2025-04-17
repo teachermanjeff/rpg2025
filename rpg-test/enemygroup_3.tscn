@@ -157,6 +157,9 @@ script = ExtResource("1_yu4g0")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_whyas")]
 
+[node name="Sprite2D" parent="CharacterBody2D" index="0"]
+position = Vector2(0, 36)
+
 [node name="focus" parent="CharacterBody2D" index="1"]
 position = Vector2(-15, -1.5)
 
@@ -166,12 +169,18 @@ libraries = {
 }
 autoplay = "focusFloat"
 
+[node name="ProgressBar" parent="CharacterBody2D" index="2"]
+offset_top = 18.0
+offset_bottom = 51.0
+
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_whyas")]
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
+position = Vector2(33, 0)
 texture = ExtResource("2_nfoow")
 
 [node name="focus" parent="CharacterBody2D4" index="1"]
+z_index = 1
 position = Vector2(-15, -1.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
@@ -180,6 +189,10 @@ libraries = {
 }
 
 [node name="ProgressBar" parent="CharacterBody2D4" index="2"]
+offset_left = 25.0
+offset_top = -19.0
+offset_right = 125.0
+offset_bottom = 14.0
 max_value = 150.0
 value = 150.0
 
@@ -198,12 +211,17 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D3" index="2"]
+offset_left = -7.0
+offset_top = -23.0
+offset_right = 93.0
+offset_bottom = 10.0
 max_value = 200.0
 value = 200.0
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_whyas")]
 
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
+position = Vector2(-28, 0)
 texture = ExtResource("2_nfoow")
 
 [node name="focus" parent="CharacterBody2D2" index="1"]
@@ -216,6 +234,10 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D2" index="2"]
+offset_left = -36.0
+offset_top = -19.0
+offset_right = 64.0
+offset_bottom = 14.0
 max_value = 150.0
 value = 150.0
 
