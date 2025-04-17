@@ -1,7 +1,23 @@
-[gd_scene load_steps=17 format=3 uid="uid://b5tdgk66n2kso"]
+[gd_scene load_steps=18 format=3 uid="uid://b5tdgk66n2kso"]
 
+[ext_resource type="Script" uid="uid://dj1qfqnca23eb" path="res://enemygroup_2.gd" id="1_8i0bh"]
 [ext_resource type="PackedScene" uid="uid://yayqok80tkq2" path="res://characterbody.tscn" id="1_828ww"]
 [ext_resource type="Texture2D" uid="uid://cqajf78qg13i7" path="res://Battlers/World04_003_ Outlaw.png" id="2_xkdro"]
+
+[sub_resource type="Animation" id="Animation_8i0bh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -1.5)]
+}
 
 [sub_resource type="Animation" id="Animation_xkdro"]
 resource_name = "focusFloat"
@@ -19,7 +35,16 @@ tracks/0/keys = {
 "values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
 }
 
-[sub_resource type="Animation" id="Animation_8i0bh"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7av0c"]
+_data = {
+&"RESET": SubResource("Animation_8i0bh"),
+&"focusFloat": SubResource("Animation_xkdro")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8i0bh"]
+load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
+
+[sub_resource type="Animation" id="Animation_o6v3n"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -33,15 +58,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-15, -1.5)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7av0c"]
-_data = {
-&"RESET": SubResource("Animation_8i0bh"),
-&"focusFloat": SubResource("Animation_xkdro")
-}
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8i0bh"]
-load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
 
 [sub_resource type="Animation" id="Animation_7av0c"]
 resource_name = "focusFloat"
@@ -59,7 +75,13 @@ tracks/0/keys = {
 "values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
 }
 
-[sub_resource type="Animation" id="Animation_o6v3n"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txbfm"]
+_data = {
+&"RESET": SubResource("Animation_o6v3n"),
+&"focusFloat": SubResource("Animation_7av0c")
+}
+
+[sub_resource type="Animation" id="Animation_jkh3w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -72,12 +94,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-15, -1.5)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_txbfm"]
-_data = {
-&"RESET": SubResource("Animation_o6v3n"),
-&"focusFloat": SubResource("Animation_7av0c")
 }
 
 [sub_resource type="Animation" id="Animation_yay8o"]
@@ -96,7 +112,16 @@ tracks/0/keys = {
 "values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2), Vector2(-15, -1.5)]
 }
 
-[sub_resource type="Animation" id="Animation_jkh3w"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2g5s"]
+_data = {
+&"RESET": SubResource("Animation_jkh3w"),
+&"focusFloat": SubResource("Animation_yay8o")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7av0c"]
+load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
+
+[sub_resource type="Animation" id="Animation_4438h"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -110,15 +135,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-15, -1.5)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2g5s"]
-_data = {
-&"RESET": SubResource("Animation_jkh3w"),
-&"focusFloat": SubResource("Animation_yay8o")
-}
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7av0c"]
-load_path = "res://.godot/imported/World01_007_Pirate.png-c596b1a89f76d8a73d18ad891c8c6cec.ctex"
 
 [sub_resource type="Animation" id="Animation_tvmjh"]
 resource_name = "focusFloat"
@@ -136,21 +152,6 @@ tracks/0/keys = {
 "values": [Vector2(-15, -1.5), Vector2(-15, -1), Vector2(-15, -2)]
 }
 
-[sub_resource type="Animation" id="Animation_4438h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-15, -1.5)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gprtj"]
 _data = {
 &"RESET": SubResource("Animation_4438h"),
@@ -158,6 +159,7 @@ _data = {
 }
 
 [node name="enemygroup2" type="Node2D"]
+script = ExtResource("1_8i0bh")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_828ww")]
 

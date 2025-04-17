@@ -13,11 +13,11 @@ signal next_player
 @onready var endGameButton = $"../CanvasLayer/endGameButton"
 
 func _ready():
-	print("Next level button is: ", next_level_button)
+	print("Next level button_2 is: ", next_level_button_2)
 	enemies = get_children()
 	for i in enemies.size():
 		enemies[i].position = Vector2(i*32, 0)
-	next_level_button.hide()
+	next_level_button_2.hide()
 	show_choice()
 
 func _process(_delta):
@@ -89,13 +89,13 @@ func check_for_victory():
 			all_dead = false
 			break
 	if all_dead:
-		show_next_level_button()
+		show_next_level_button_2()
 		choice.hide()
 
 
 
-func show_next_level_button():
-	next_level_button.show()
+func show_next_level_button_2():
+	next_level_button_2.show()
 
-func _on_next_level_button_pressed():
-	get_tree().change_scene_to_file("res://battle_scene2.tscn")
+func _on_next_level_button_2_pressed():
+	get_tree().change_scene_to_file("res://battle_scene3.tscn")
