@@ -167,10 +167,7 @@ script = ExtResource("1_8i0bh")
 position = Vector2(-7, 18)
 texture = ExtResource("2_xkdro")
 
-[node name="focus" parent="CharacterBody2D" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_7av0c")
 }
@@ -190,10 +187,7 @@ value = 150.0
 position = Vector2(37, 16)
 texture = SubResource("CompressedTexture2D_8i0bh")
 
-[node name="focus" parent="CharacterBody2D2" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_txbfm")
 }
@@ -211,10 +205,7 @@ offset_bottom = 31.0
 position = Vector2(18, -16)
 texture = ExtResource("2_xkdro")
 
-[node name="focus" parent="CharacterBody2D3" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_x2g5s")
 }
@@ -234,10 +225,7 @@ value = 150.0
 position = Vector2(-18, -16)
 texture = SubResource("CompressedTexture2D_7av0c")
 
-[node name="focus" parent="CharacterBody2D4" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_gprtj")
 }

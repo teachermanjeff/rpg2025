@@ -91,6 +91,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_lfkt1")
 
 [node name="focus" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(-15, -2)
 scale = Vector2(0.4, 0.417)

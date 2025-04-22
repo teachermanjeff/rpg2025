@@ -165,10 +165,7 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("3_6rvls")
 
-[node name="focus" parent="CharacterBody2D" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_6rvls")
 }
@@ -187,10 +184,7 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("4_u4hwk")
 
-[node name="focus" parent="CharacterBody2D2" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_5ujkm")
 }
@@ -209,10 +203,7 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("5_choiy")
 
-[node name="focus" parent="CharacterBody2D3" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_jadfv")
 }
@@ -231,10 +222,7 @@ position = Vector2(-0.5, -1)
 scale = Vector2(0.5, 0.492)
 texture = ExtResource("6_5ujkm")
 
-[node name="focus" parent="CharacterBody2D4" index="1"]
-position = Vector2(-15, -1.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_82rfk")
 }

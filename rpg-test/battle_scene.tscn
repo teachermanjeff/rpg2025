@@ -12,19 +12,19 @@
 script = ExtResource("1_sl17i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -29.0
-offset_top = -13.0
-offset_right = 1125.0
-offset_bottom = 1973.0
+offset_left = -28.0
+offset_top = -14.0
+offset_right = 1126.0
+offset_bottom = 1972.0
 texture = ExtResource("2_sl17i")
 expand_mode = 1
 
 [node name="EnemyGroup" parent="." instance=ExtResource("1_fw8re")]
-position = Vector2(557, 1295)
+position = Vector2(305, 1288)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("3_5g7vw")]
-position = Vector2(680, 1715)
+position = Vector2(425, 1720)
 scale = Vector2(5, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
