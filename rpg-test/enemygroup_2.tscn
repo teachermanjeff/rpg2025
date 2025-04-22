@@ -164,7 +164,6 @@ script = ExtResource("1_8i0bh")
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_828ww")]
 
 [node name="Sprite2D" parent="CharacterBody2D" index="0"]
-position = Vector2(-7, 18)
 texture = ExtResource("2_xkdro")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D/focus" index="0"]
@@ -174,17 +173,16 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D" index="2"]
-offset_left = -15.0
-offset_top = -1.0
-offset_right = 85.0
-offset_bottom = 32.0
+offset_left = -7.0
+offset_top = -18.0
+offset_right = 93.0
+offset_bottom = 15.0
 max_value = 150.0
 value = 150.0
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_828ww")]
 
 [node name="Sprite2D" parent="CharacterBody2D2" index="0"]
-position = Vector2(37, 16)
 texture = SubResource("CompressedTexture2D_8i0bh")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D2/focus" index="0"]
@@ -194,15 +192,14 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D2" index="2"]
-offset_left = 30.0
-offset_top = -2.0
-offset_right = 130.0
-offset_bottom = 31.0
+offset_left = -7.0
+offset_top = -18.0
+offset_right = 93.0
+offset_bottom = 15.0
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_828ww")]
 
 [node name="Sprite2D" parent="CharacterBody2D3" index="0"]
-position = Vector2(18, -16)
 texture = ExtResource("2_xkdro")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D3/focus" index="0"]
@@ -212,17 +209,16 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D3" index="2"]
-offset_left = 10.0
-offset_top = -35.0
-offset_right = 110.0
-offset_bottom = -2.0
+offset_left = -7.0
+offset_top = -18.0
+offset_right = 93.0
+offset_bottom = 15.0
 max_value = 150.0
 value = 150.0
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_828ww")]
 
 [node name="Sprite2D" parent="CharacterBody2D4" index="0"]
-position = Vector2(-18, -16)
 texture = SubResource("CompressedTexture2D_7av0c")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D4/focus" index="0"]
@@ -232,10 +228,10 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D4" index="2"]
-offset_left = -25.0
-offset_top = -34.0
-offset_right = 75.0
-offset_bottom = -1.0
+offset_left = -7.0
+offset_top = -18.0
+offset_right = 93.0
+offset_bottom = 15.0
 
 [editable path="CharacterBody2D"]
 [editable path="CharacterBody2D2"]

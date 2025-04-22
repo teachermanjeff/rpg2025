@@ -5,6 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://cqj7i6hgla57i" path="res://hand_cursor0000.png" id="2_2nbgj"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_bfs80"]
 
+[sub_resource type="Animation" id="Animation_wabqk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -2)]
+}
+
 [sub_resource type="Animation" id="Animation_1f5n7"]
 resource_name = "focusFloat"
 loop_mode = 1
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-15, -1.5), Vector2(-15, -2), Vector2(-15, -1), Vector2(-15, -1.5)]
-}
-
-[sub_resource type="Animation" id="Animation_wabqk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-15, -2)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rq40k"]
