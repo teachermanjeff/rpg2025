@@ -18,7 +18,7 @@ offset_bottom = 1926.0
 texture = ExtResource("1_sveay")
 
 [node name="enemygroup3" parent="." instance=ExtResource("3_wptth")]
-position = Vector2(663, 1606)
+position = Vector2(724, 1580)
 scale = Vector2(5, 5)
 
 [node name="PlayerGroup" parent="." instance=ExtResource("2_sveay")]
