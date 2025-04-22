@@ -65,7 +65,7 @@ func attack_enemy(_player):
 		return
 	var target_enemy = alive_enemies[randi() % alive_enemies.size()]
 	var damage = randi_range(1, 3)
-	target_enemy.take_damage(damage)
+	#target_enemy.take_damage(damage)
 
 func _on_enemy_group_next_player() -> void:
 	if index < players.size() - 1:
