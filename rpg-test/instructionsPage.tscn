@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5v3ux6jk3bsp"]
+
+[ext_resource type="Texture2D" uid="uid://d011qkr5u6hue" path="res://menu.jpg" id="1_efgp5"]
+[ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_hkpu3"]
+[ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_fipnp"]
+[ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="4_mi4dg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -24.0
+offset_right = 1123.25
+offset_bottom = 1940.0
+texture = ExtResource("1_efgp5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 177.0
+offset_right = 876.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 51
+theme_override_fonts/font = ExtResource("2_hkpu3")
+theme_override_font_sizes/font_size = 150
+text = "Instructions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 1554.0
+offset_right = 691.0
+offset_bottom = 1668.0
+theme_override_fonts/font = ExtResource("3_fipnp")
+theme_override_font_sizes/font_size = 51
+text = "Back"
+icon = ExtResource("4_mi4dg")
+icon_alignment = 1
+expand_icon = true
