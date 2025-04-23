@@ -6,6 +6,7 @@ var is_battling: bool = false
 var action_queue: Array = []
 
 @onready var enemy_group = $"../EnemyGroup"
+@export var level: int = 1
 
 func _ready():
 	players = get_children()
@@ -43,14 +44,14 @@ func start_battle():
 		if players[i].is_alive():
 			live_player_indices.append(i)
 	
-	print("Action Queue: ", action_queue)
+	#print("Action Queue: ", action_queue)
 	await _action(action_queue)
 	action_queue.clear()
 	await start_enemy_turn()
 	is_battling = false
 
 func _action(stack) -> void:
-	print("Running _action for players: ", stack)
+	#print("Running _action for players: ", stack)
 	for player_index in stack:
 		var player = players[player_index]
 		if not player.is_alive():

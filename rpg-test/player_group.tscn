@@ -172,10 +172,7 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D" index="2"]
-offset_left = 8.0
-offset_right = 108.0
 offset_bottom = 13.0
-scale = Vector2(-0.15, 0.15)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_c8kvg")]
 
@@ -191,10 +188,7 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D2" index="2"]
-offset_left = 8.0
-offset_right = 108.0
 offset_bottom = 13.0
-scale = Vector2(-0.15, 0.15)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("2_c8kvg")]
 
@@ -210,10 +204,7 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D3" index="2"]
-offset_left = 8.0
-offset_right = 108.0
 offset_bottom = 13.0
-scale = Vector2(-0.15, 0.15)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("2_c8kvg")]
 
@@ -229,10 +220,7 @@ libraries = {
 autoplay = "focusFloat"
 
 [node name="ProgressBar" parent="CharacterBody2D4" index="2"]
-offset_left = 8.0
-offset_right = 108.0
 offset_bottom = 13.0
-scale = Vector2(-0.15, 0.15)
 
 [editable path="CharacterBody2D"]
 [editable path="CharacterBody2D2"]

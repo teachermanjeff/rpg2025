@@ -11,7 +11,7 @@ signal next_player
 @onready var endGameButton = $"../CanvasLayer/endGameButton"
 
 func _ready():
-	print("End Game Button is: ", endGameButton)
+	#print("End Game Button is: ", endGameButton)
 	enemies = get_children()
 	for i in enemies.size():
 		enemies[i].position = Vector2(i*32, 0)

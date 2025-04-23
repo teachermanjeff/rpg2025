@@ -9,13 +9,9 @@ var is_active_turn: bool = true
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
 @onready var next_level_button = get_tree().root.get_node("BattleScene/CanvasLayer/next_level_button")
-
+@export var level: int = 1
 
 func _ready():
-	if next_level_button == null:
-		print("next_level_button not found")
-	else:
-		print("next_level_button is ready")
 	enemies = get_children()
 	for i in enemies.size():
 		enemies[i].position = Vector2(i*32, 0)

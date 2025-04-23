@@ -177,8 +177,6 @@ offset_left = -7.0
 offset_top = -18.0
 offset_right = 93.0
 offset_bottom = 15.0
-max_value = 150.0
-value = 150.0
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_828ww")]
 
@@ -213,8 +211,6 @@ offset_left = -7.0
 offset_top = -18.0
 offset_right = 93.0
 offset_bottom = 15.0
-max_value = 150.0
-value = 150.0
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_828ww")]
 

@@ -3,12 +3,19 @@ extends CharacterBody2D
 @onready var _focus = $focus
 @onready var progress_bar = $ProgressBar
 @onready var animation_player = $AnimationPlayer
-@export var MAX_HEALTH_RANGE_MIN: int = 5
-@export var MAX_HEALTH_RANGE_MAX: int = 10
+@export var MAX_HEALTH_RANGE_MIN: int = 3
+@export var MAX_HEALTH_RANGE_MAX: int = 8
 
 var MAX_HEALTH: int
 
 var idle = true
+
+var level: int = 1  
+
+func set_level(value: int) -> void:
+	level = value
+
+
 
 var health: float:
 	set(value):
@@ -18,7 +25,8 @@ var health: float:
 
 func _ready():
 	randomize()
-	MAX_HEALTH = randi_range(MAX_HEALTH_RANGE_MIN, MAX_HEALTH_RANGE_MAX)
+	var bonus = level * 2 
+	MAX_HEALTH = randi_range(MAX_HEALTH_RANGE_MIN + bonus, MAX_HEALTH_RANGE_MAX + bonus)
 	health = MAX_HEALTH
 
 func _update_progress_bar():
