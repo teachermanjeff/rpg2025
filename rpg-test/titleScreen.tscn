@@ -56,9 +56,9 @@ vertical_alignment = 1
 
 [node name="MenuButton" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = 408.0
+offset_left = 403.0
 offset_top = 976.0
-offset_right = 655.0
+offset_right = 650.0
 offset_bottom = 1093.0
 theme_override_fonts/font = ExtResource("3_k43e0")
 theme_override_font_sizes/font_size = 36
@@ -69,13 +69,26 @@ expand_icon = true
 
 [node name="MenuButton2" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = 399.0
+offset_left = 389.0
 offset_top = 1218.0
-offset_right = 672.0
+offset_right = 662.0
 offset_bottom = 1304.0
 theme_override_fonts/font = ExtResource("3_k43e0")
 theme_override_font_sizes/font_size = 36
 text = "Lore"
+icon = ExtResource("2_tic01")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MenuButton3" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 1095.0
+offset_right = 662.0
+offset_bottom = 1182.0
+theme_override_fonts/font = ExtResource("3_k43e0")
+theme_override_font_sizes/font_size = 36
+text = "Instructions"
 icon = ExtResource("2_tic01")
 icon_alignment = 1
 expand_icon = true
@@ -93,3 +106,4 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="MenuButton2" to="." method="_on_menu_button_2_pressed"]
+[connection signal="pressed" from="MenuButton3" to="." method="_on_menu_button_3_pressed"]

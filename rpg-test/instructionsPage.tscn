@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5v3ux6jk3bsp"]
+[gd_scene load_steps=6 format=3 uid="uid://b5v3ux6jk3bsp"]
 
 [ext_resource type="Texture2D" uid="uid://d011qkr5u6hue" path="res://menu.jpg" id="1_efgp5"]
+[ext_resource type="Script" uid="uid://dn1vl1gdqhace" path="res://instructions_page.gd" id="1_mi4dg"]
 [ext_resource type="FontFile" uid="uid://cwsaunbyxmke6" path="res://Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_hkpu3"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="3_fipnp"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="4_mi4dg"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mi4dg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -48,3 +50,24 @@ text = "Back"
 icon = ExtResource("4_mi4dg")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 331.0
+offset_right = 1059.0
+offset_bottom = 1532.0
+theme_override_fonts/font = ExtResource("3_fipnp")
+theme_override_font_sizes/font_size = 66
+text = "When the hand is pointed at one of your teammated, choose the action you would like to execute
+
+ATTACK will inflict damage upon an enemy the arrow points at
+
+DEFEND will block some incoming damage for 1 turn
+
+The game ends when either all teammates' or all enemies' health hit zero
+
+                -Good luck!-"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
