@@ -17,6 +17,8 @@ func _ready():
 		enemies[i].position = Vector2(i*32, 0)
 	endGameButton.hide()
 	show_choice()
+	var attack_button = choice.get_node("Attack")
+	attack_button.pressed.connect(_on_attack_pressed)
 
 func _process(_delta):
 	if !is_active_turn:

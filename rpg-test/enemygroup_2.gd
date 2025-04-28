@@ -18,6 +18,9 @@ func _ready():
 		enemies[i].position = Vector2(i*32, 0)
 	next_level_button_2.hide()
 	show_choice()
+	var attack_button = choice.get_node("Attack")
+	attack_button.pressed.connect(_on_attack_pressed)
+
 
 func _process(_delta):
 	if !is_active_turn:
@@ -96,5 +99,5 @@ func check_for_victory():
 func show_next_level_button_2():
 	next_level_button_2.show()
 
-func _on_next_level_button_2_pressed():
+func _on_next_level_button_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://battle_scene3.tscn")
