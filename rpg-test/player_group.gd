@@ -68,10 +68,6 @@ func attack_enemy(_player):
 	#var damage = randi_range(1, 3)
 	#target_enemy.take_damage(damage)
 	
-	
-#idk what im doing with this function, im trying my best lmao
-func defend(player):
-	pass
 
 func _on_enemy_group_next_player() -> void:
 	if index < players.size() - 1:
@@ -112,7 +108,3 @@ func check_for_defeat():
 			break
 	if all_dead:
 		get_tree().change_scene_to_file("res://loseScreen.tscn")
-
-
-func _on_defend_button_down() -> void:
-	defend(players)

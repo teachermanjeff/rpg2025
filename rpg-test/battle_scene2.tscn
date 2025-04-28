@@ -45,16 +45,6 @@ icon = ExtResource("4_trv36")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Defend" type="Button" parent="CanvasLayer/choice"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_ji01y")
-theme_override_font_sizes/font_size = 20
-disabled = true
-text = "Defend"
-icon = ExtResource("4_trv36")
-icon_alignment = 1
-expand_icon = true
-
 [node name="Run" type="Button" parent="CanvasLayer/choice"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ji01y")

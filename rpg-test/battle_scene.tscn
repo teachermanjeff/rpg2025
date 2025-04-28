@@ -53,16 +53,6 @@ icon = ExtResource("5_sl17i")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Defend" type="Button" parent="CanvasLayer/choice"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_gf131")
-theme_override_font_sizes/font_size = 20
-disabled = true
-text = "Defend"
-icon = ExtResource("5_sl17i")
-icon_alignment = 1
-expand_icon = true
-
 [node name="Run" type="Button" parent="CanvasLayer/choice"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_gf131")
@@ -90,5 +80,4 @@ expand_icon = true
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
-[connection signal="button_down" from="CanvasLayer/choice/Defend" to="PlayerGroup" method="_on_defend_button_down"]
 [connection signal="pressed" from="CanvasLayer/next_level_button" to="EnemyGroup" method="_on_next_level_button_pressed"]
