@@ -63,7 +63,7 @@ text = "When the hand is pointed at one of your teammated, choose the action you
 
 ATTACK will inflict damage upon an enemy the arrow points at
 
-RUN will dodge incoming damage for one turn
+RUN will return to the title screen
 
 The game ends when either all teammates' or all enemies' health hit zero
 
