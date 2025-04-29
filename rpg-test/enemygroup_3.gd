@@ -95,5 +95,6 @@ func check_for_victory():
 func endGame():
 	endGameButton.show()
 
-func on_endGameButton_pressed():
+
+func _on_end_game_button_pressed():
 	get_tree().change_scene_to_file("res://win_screen.tscn")

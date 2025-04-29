@@ -69,3 +69,4 @@ expand_icon = true
 [node name="CombatManager" parent="." instance=ExtResource("3_55xxn")]
 
 [connection signal="pressed" from="CanvasLayer/endGameButton" to="." method="_on_end_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/endGameButton" to="enemygroup3" method="_on_end_game_button_pressed"]

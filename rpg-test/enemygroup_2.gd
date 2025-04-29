@@ -101,5 +101,5 @@ func check_for_victory():
 func show_next_level_button_2():
 	next_level_button_2.show()
 
-func _on_next_level_button_2_pressed() -> void:
+func _on_next_level_button_2_pressed():
 	get_tree().change_scene_to_file("res://battle_scene3.tscn")

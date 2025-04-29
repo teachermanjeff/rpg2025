@@ -7,7 +7,7 @@ var action_queue: Array = []
 
 @onready var enemy_group = $"../EnemyGroup"
 @export var level: int = 1
-@onready var enemy_group_2 = $"../EnemyGroup_2"
+@onready var enemy_group_2 = $"../enemygroup2"
 
 func _ready():
 	players = get_children()
