@@ -7,6 +7,7 @@ var action_queue: Array = []
 
 @onready var enemy_group = $"../EnemyGroup"
 @export var level: int = 1
+@onready var enemy_group_2 = $"../EnemyGroup_2"
 
 func _ready():
 	players = get_children()
@@ -60,7 +61,7 @@ func _action(stack) -> void:
 		await get_tree().create_timer(1).timeout
 
 func attack_enemy(_player):
-	print("Attacking enemy from player: ", _player.name)
+	#print("Attacking enemy from player: ", _player.name)
 	var alive_enemies = enemy_group.get_children().filter(func(e): return e.is_alive())
 	if alive_enemies.size() == 0:
 		return

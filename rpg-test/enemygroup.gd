@@ -90,6 +90,8 @@ func check_for_victory():
 		show_next_level_button()
 		choice.hide()
 
+func _on_run_pressed():
+	get_tree().change_scene_to_file("res://titleScreen.tscn")
 
 
 func show_next_level_button():

@@ -75,6 +75,8 @@ func _reset_focus():
 	for enemy in enemies:
 		enemy.unfocus()
 		
+func _on_run_pressed():
+	get_tree().change_scene_to_file("res://titleScreen.tscn")
 
 func _start_choosing():
 	_reset_focus()

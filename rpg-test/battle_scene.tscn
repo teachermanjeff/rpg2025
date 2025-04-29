@@ -57,7 +57,6 @@ expand_icon = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_gf131")
 theme_override_font_sizes/font_size = 20
-disabled = true
 text = "Run"
 icon = ExtResource("5_sl17i")
 icon_alignment = 1
@@ -80,4 +79,6 @@ expand_icon = true
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]
+[connection signal="pressed" from="CanvasLayer/choice/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="CanvasLayer/choice/Run" to="EnemyGroup" method="_on_run_pressed"]
 [connection signal="pressed" from="CanvasLayer/next_level_button" to="EnemyGroup" method="_on_next_level_button_pressed"]
