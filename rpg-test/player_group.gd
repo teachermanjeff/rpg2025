@@ -5,11 +5,18 @@ var index : int = 0
 var is_battling: bool = false
 var action_queue: Array = []
 
-@onready var enemy_group = $"../EnemyGroup"
+#@onready var enemy_group = $"../EnemyGroup"
 @export var level: int = 1
-@onready var enemy_group_2 = $"../enemygroup2"
+#@onready var enemy_group_2 = $"../enemygroup2"
+var enemy_group: Node2D
 
 func _ready():
+	if has_node("../EnemyGroup"):
+		enemy_group = get_node("../EnemyGroup")
+	elif has_node("../enemygroup2"):
+		enemy_group = get_node("../enemygroup2")
+	else:
+		push_error("No enemy group found!")
 	players = get_children()
 	for i in players.size():
 		players[i].position = Vector2(i*32, 0)
