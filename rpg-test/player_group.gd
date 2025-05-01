@@ -45,6 +45,9 @@ func _process(_delta):
 				if action_queue.size() == players.filter(func(p): return p.is_alive()).size() and not is_battling:
 					start_battle()
 
+
+
+
 func start_battle():
 	is_battling = true
 	var live_player_indices = []
@@ -52,14 +55,13 @@ func start_battle():
 		if players[i].is_alive():
 			live_player_indices.append(i)
 	
-	#print("Action Queue: ", action_queue)
+
 	await _action(action_queue)
 	action_queue.clear()
 	await start_enemy_turn()
 	is_battling = false
 
 func _action(stack) -> void:
-	#print("Running _action for players: ", stack)
 	for player_index in stack:
 		var player = players[player_index]
 		if not player.is_alive():
@@ -68,13 +70,10 @@ func _action(stack) -> void:
 		await get_tree().create_timer(1).timeout
 
 func attack_enemy(_player):
-	#print("Attacking enemy from player: ", _player.name)
 	var alive_enemies = enemy_group.get_children().filter(func(e): return e.is_alive())
 	if alive_enemies.size() == 0:
 		return
-	#var target_enemy = alive_enemies[randi() % alive_enemies.size()]
-	#var damage = randi_range(1, 3)
-	#target_enemy.take_damage(damage)
+
 	
 
 func _on_enemy_group_next_player() -> void:
@@ -99,7 +98,7 @@ func start_enemy_turn() -> void:
 		var alive_players = players.filter(func(p): return p.is_alive())
 		if alive_players.size() == 0:
 			break
-		var target_player = players[randi() % players.size()]
+		var target_player = alive_players[randi() % alive_players.size()]
 		enemy_attack(enemy, target_player)
 		await get_tree().create_timer(1).timeout
 	is_battling = false
