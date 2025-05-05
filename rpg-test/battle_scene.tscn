@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpwk6hnckfguw"]
+[gd_scene load_steps=7 format=3 uid="uid://bpwk6hnckfguw"]
 
 [ext_resource type="PackedScene" uid="uid://j5gl0jw6gvhc" path="res://enemygroup.tscn" id="1_fw8re"]
 [ext_resource type="Script" uid="uid://di07m0dy1aa5t" path="res://battle_scene.gd" id="1_sl17i"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="3_5g7vw"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_gf131"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="5_sl17i"]
-[ext_resource type="PackedScene" uid="uid://dx68dsb10efgs" path="res://combat_manager.tscn" id="7_x5h4l"]
 
 [node name="BattleScene" type="Node2D"]
 script = ExtResource("1_sl17i")
@@ -74,8 +73,6 @@ text = "Next Level"
 icon = ExtResource("5_sl17i")
 icon_alignment = 1
 expand_icon = true
-
-[node name="CombatManager" parent="." instance=ExtResource("7_x5h4l")]
 
 [connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]

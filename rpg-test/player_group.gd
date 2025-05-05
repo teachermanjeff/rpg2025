@@ -15,13 +15,18 @@ func _ready():
 		enemy_group = get_node("../EnemyGroup")
 	elif has_node("../enemygroup2"):
 		enemy_group = get_node("../enemygroup2")
+	elif has_node("../enemygroup3"):
+		enemy_group = get_node("../enemygroup3
+		")
 	else:
-		push_error("No enemy group found!")
+		push_error("No enemy group found")
 	players = get_children()
 	for i in players.size():
 		players[i].position = Vector2(i*32, 0)
 	is_battling = false
 	action_queue = []
+	if players.size() > 0:
+		players[0].focus()
 
 func _process(_delta):
 	if not is_battling:

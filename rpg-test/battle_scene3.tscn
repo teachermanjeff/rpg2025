@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0ao0gfmf4l21"]
+[gd_scene load_steps=7 format=3 uid="uid://c0ao0gfmf4l21"]
 
 [ext_resource type="Script" uid="uid://di07m0dy1aa5t" path="res://battle_scene.gd" id="1_55xxn"]
 [ext_resource type="Texture2D" uid="uid://cr5775m76u2ru" path="res://forestHideout.jpg" id="1_sveay"]
 [ext_resource type="PackedScene" uid="uid://e1fmrebk20qw" path="res://player_group.tscn" id="2_sveay"]
-[ext_resource type="PackedScene" uid="uid://dx68dsb10efgs" path="res://combat_manager.tscn" id="3_55xxn"]
 [ext_resource type="PackedScene" uid="uid://bqoxu6g8y0y68" path="res://enemygroup_3.tscn" id="3_wptth"]
 [ext_resource type="FontFile" uid="uid://c7dgpf7b2y7oe" path="res://RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="4_wptth"]
 [ext_resource type="Texture2D" uid="uid://c8g3kuf1t63yf" path="res://UI assets Demo (1x).png" id="5_fn1d2"]
@@ -47,7 +46,6 @@ expand_icon = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wptth")
 theme_override_font_sizes/font_size = 20
-disabled = true
 text = "Run"
 icon = ExtResource("5_fn1d2")
 icon_alignment = 1
@@ -66,7 +64,6 @@ icon = ExtResource("5_fn1d2")
 icon_alignment = 1
 expand_icon = true
 
-[node name="CombatManager" parent="." instance=ExtResource("3_55xxn")]
-
+[connection signal="next_player" from="enemygroup3" to="PlayerGroup" method="_on_enemy_group_next_player"]
 [connection signal="pressed" from="CanvasLayer/endGameButton" to="." method="_on_end_game_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/endGameButton" to="enemygroup3" method="_on_end_game_button_pressed"]

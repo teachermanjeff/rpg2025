@@ -9,6 +9,7 @@ var is_active_turn: bool = true
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
 @onready var endGameButton = $"../CanvasLayer/endGameButton"
+@export var level: int = 2
 
 func _ready():
 	#print("End Game Button is: ", endGameButton)
@@ -94,7 +95,8 @@ func check_for_victory():
 
 func endGame():
 	endGameButton.show()
-
+func _on_run_pressed():
+	get_tree().change_scene_to_file("res://titleScreen.tscn")
 
 func _on_end_game_button_pressed():
 	get_tree().change_scene_to_file("res://winScreen.tscn")
