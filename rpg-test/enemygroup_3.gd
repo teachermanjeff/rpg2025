@@ -12,7 +12,6 @@ signal next_player
 @export var level: int = 2
 
 func _ready():
-	#print("End Game Button is: ", endGameButton)
 	enemies = get_children()
 	for i in enemies.size():
 		enemies[i].position = Vector2(i*32, 0)

@@ -5,9 +5,7 @@ var index : int = 0
 var is_battling: bool = false
 var action_queue: Array = []
 
-#@onready var enemy_group = $"../EnemyGroup"
 @export var level: int = 1
-#@onready var enemy_group_2 = $"../enemygroup2"
 var enemy_group: Node2D
 
 func _ready():

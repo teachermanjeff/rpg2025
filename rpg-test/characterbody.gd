@@ -37,7 +37,6 @@ func _play_animation():
 
 
 func focus():
-	print(name, " is being focused.")
 	_focus.show()
 
 func unfocus():
