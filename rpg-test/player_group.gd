@@ -25,6 +25,9 @@ func _ready():
 	action_queue = []
 	if players.size() > 0:
 		players[0].focus()
+	if enemy_group.has_signal("player_attack_complete"):
+		enemy_group.connect("player_attack_complete", Callable(self, "_on_player_attack_complete"))
+
 
 func _process(_delta):
 	if not is_battling:
@@ -48,8 +51,8 @@ func _process(_delta):
 				if action_queue.size() == players.filter(func(p): return p.is_alive()).size() and not is_battling:
 					start_battle()
 
-
-
+func _on_player_attack_complete():
+	await start_enemy_turn()
 
 func start_battle():
 	is_battling = true

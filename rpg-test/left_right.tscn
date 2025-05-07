@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xgmt2tnrdxqt"]
+
+[node name="leftRight" type="HBoxContainer"]
+offset_right = 120.0
+offset_bottom = 40.0
+
+[node name="Left" type="Button" parent="."]
+layout_mode = 2
+text = "  Left  "
+
+[node name="Right" type="Button" parent="."]
+layout_mode = 2
+text = " Right "

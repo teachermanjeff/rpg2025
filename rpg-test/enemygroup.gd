@@ -6,6 +6,7 @@ var is_battling: bool = false
 var index: int = 0
 var is_active_turn: bool = true
 
+signal player_attack_complete
 signal next_player
 @onready var choice = $"../CanvasLayer/choice"
 @onready var next_level_button = get_tree().root.get_node("BattleScene/CanvasLayer/next_level_button")
@@ -23,23 +24,11 @@ func _process(_delta):
 		return
 	if not choice.visible:
 		if Input.is_action_just_pressed("left"):
-			var new_index = index - 1
-			while new_index >= 0 and not enemies[new_index].is_alive():
-				new_index -= 1
-			if new_index >= 0:
-				switch_focus(new_index, index)
-				index = new_index
-
+			handle_left_input()
 		if Input.is_action_just_pressed("right"):
-			var new_index = index + 1
-			while new_index < enemies.size() and not enemies[new_index].is_alive():
-				new_index += 1
-			if new_index < enemies.size():
-				switch_focus(new_index, index)
-				index = new_index
+			handle_right_input()
 		if Input.is_action_just_pressed("select"):
-			action_queue.push_back(index)
-			emit_signal("next_player")
+			handle_select_input()
 	
 	if action_queue.size() == enemies.size() and not is_battling:
 		is_battling = true
@@ -53,6 +42,7 @@ func _action(stack):
 		await get_tree().create_timer(1).timeout
 	action_queue.clear()
 	is_battling = false
+	emit_signal("player_attack_complete")
 	show_choice()
 
 
@@ -99,3 +89,35 @@ func show_next_level_button():
 
 func _on_next_level_button_pressed():
 	get_tree().change_scene_to_file("res://battle_scene2.tscn")
+
+
+func _on_left_button_pressed():
+	handle_left_input()
+
+
+func _on_right_button_pressed():
+	handle_right_input()
+
+func handle_left_input():
+	var new_index = index - 1
+	while new_index >= 0 and not enemies[new_index].is_alive():
+		new_index -= 1
+	if new_index >= 0:
+		switch_focus(new_index, index)
+		index = new_index
+
+func handle_right_input():
+	var new_index = index + 1
+	while new_index < enemies.size() and not enemies[new_index].is_alive():
+		new_index += 1
+	if new_index < enemies.size():
+		switch_focus(new_index, index)
+		index = new_index
+
+
+func _on_strike_button_pressed():
+	handle_select_input()
+
+func handle_select_input():
+	action_queue.push_back(index)
+	emit_signal("next_player")
