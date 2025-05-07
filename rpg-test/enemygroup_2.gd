@@ -44,6 +44,7 @@ func _action(stack):
 			enemies[i].take_damage(1)
 		await get_tree().create_timer(1).timeout
 	action_queue.clear()
+	check_for_victory()
 	is_battling = false
 	emit_signal("player_attack_complete")
 	show_choice()

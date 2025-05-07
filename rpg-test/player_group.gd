@@ -80,7 +80,7 @@ func attack_enemy(_player):
 	if alive_enemies.size() == 0:
 		return
 
-	
+
 
 func _on_enemy_group_next_player() -> void:
 	if index < players.size() - 1:
